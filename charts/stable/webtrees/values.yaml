@@ -17,13 +17,13 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: Amsterdam/Europe
   # -- Enable pretty URLs
   PRETTY_URLS: "TRUE"
   # -- webtrees localization setting
   LANG: "en-US"
   # -- Base URL of the installation, with protocol. This needs to be in the form of http://webtrees.example.com
-  BASE_URL: https://webtrees.k8s-at-home.com
+  BASE_URL: https://webtrees.stamboomwesterman.net
   # -- Database server type
   DB_TYPE: "mysql"
   # -- Database hostname
