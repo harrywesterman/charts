@@ -25,12 +25,19 @@ env:
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
+#service:
+#  main:
+#    ports:
+#      http:
+#        port: 80
 service:
   main:
+    type: LoadBalancer
+    externalTrafficPolicy: Cluster
+    loadBalancerIP:
     ports:
       http:
         port: 80
-
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
@@ -41,4 +48,6 @@ ingress:
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
+    mountPath: /config/
+    storageClass: "longhorn"
