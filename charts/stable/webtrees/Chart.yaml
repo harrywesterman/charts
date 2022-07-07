@@ -1,6 +1,6 @@
 ---
 apiVersion: v2
-appVersion: 2.0.19
+appVersion: 2.1.6
 description: Open-source online collaborative genealogy application
 name: webtrees
 version: 2.0.0
