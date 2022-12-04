@@ -46,3 +46,9 @@ persistence:
     enabled: true
     mountPath: /app/config
     storageClass: "longhorn"
+
+probes:
+  liveness:
+    enabled: false
+    readiness: false
+    startup: false
