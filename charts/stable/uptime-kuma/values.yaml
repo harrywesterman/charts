@@ -46,7 +46,7 @@ ingress:
 # -- Configure persistence settings for the chart under this key.
 # @default -- See values.yaml
 persistence:
-  data:
+  config:
     enabled: true
     mountPath: /app/data
     storageClass: "longhorn"
