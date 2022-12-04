@@ -10,7 +10,7 @@ image:
   repository: louislam/uptime-kuma
   # -- image tag
   # @default -- chart.appVersion
-  tag: development
+  tag: latest
   # -- image pull policy
   pullPolicy: IfNotPresent
 
