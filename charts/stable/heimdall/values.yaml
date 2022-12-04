@@ -12,7 +12,8 @@ image:
   # -- image repository
   repository: linuxserver/heimdall
   # -- image tag
-  tag: version-2.2.2
+  #tag: version-2.2.2
+  tag: latest
   # -- image pull policy
   pullPolicy: IfNotPresent
 
