@@ -9,7 +9,8 @@ image:
   # -- image repository
   repository: ghcr.io/sct/overseerr
   # -- image tag
-  tag: 1.26.1
+  #tag: 1.26.1
+  tag: latest
   # -- image pull policy
   pullPolicy: IfNotPresent
 
@@ -25,9 +26,12 @@ env:
 # @default -- See values.yaml
 service:
   main:
+    type: LoadBalancer
+    externalTrafficPolicy: Cluster
+    loadBalancerIP:
     ports:
       http:
-        port: 5055
+        port: 80
 
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
@@ -39,5 +43,6 @@ ingress:
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
     mountPath: /app/config
+    storageClass: "longhorn"
