@@ -81,7 +81,7 @@ service:
     loadBalancerIP:
     ports:
       http:
-        port: 80
+        port: 3000
 
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
