@@ -57,8 +57,16 @@ env:
   # GOODREADS: https://www.goodreads.com/
   # SKOOB: https://www.skoob.com.br/
   FOOTER: Thanks for stopping by!
-  SKIP_HEALTH_CHECK_LOGS: true
-  
+  #SKIP_HEALTH_CHECK_LOGS: true
+
+probes:
+  liveness:
+    enabled: false
+  readiness:
+    enabled: false
+  startup:
+    enabled: false
+    
 #  -- Configures service settings for the chart.
 # @default -- See values.yaml
 #service:
