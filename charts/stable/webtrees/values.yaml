@@ -21,9 +21,9 @@ env:
   # -- Enable pretty URLs
   PRETTY_URLS: "TRUE"
   # -- webtrees localization setting
-  LANG: "en-US"
+  LANG: "nl-NL"
   # -- Base URL of the installation, with protocol. This needs to be in the form of http://webtrees.example.com
-  BASE_URL: https://webtrees.stamboomwesterman.net
+  BASE_URL: https://webtrees.westermanonline.com 
   # -- Database server type
   DB_TYPE: "mysql"
   # -- Database hostname
