@@ -9,7 +9,7 @@ image:
   # -- image repository
   repository: ghcr.io/nathanvaughn/webtrees
   # -- image tag
-  tag: "2.1.6"
+  tag: "2.1.12"
   # -- image pull policy
   pullPolicy: IfNotPresent
 
