@@ -13,9 +13,6 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
 
-controller:
-  replicas: 3
-
 # -- environment variables. See [webtrees-docker documentation](https://github.com/NathanVaughn/webtrees-docker#environment-variables) for more details.
 # @default -- See below
 env:
@@ -86,19 +83,19 @@ persistence:
     enabled: true
     mountPath: /var/www/webtrees/data/
     storageClass: "longhorn"
-    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
     size: 4Gi
   media:
     enabled: true
     mountPath: /var/www/webtrees/media/
     storageClass: "longhorn"
-    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
     size: 8Gi
   themes:
     enabled: true
     mountPath: /var/www/webtrees/modules_v4/
     storageClass: "longhorn"
-    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
     size: 1Gi
 
 # -- Enable and configure mariadb database subchart under this key.
