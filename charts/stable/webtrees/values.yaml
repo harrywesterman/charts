@@ -13,6 +13,9 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
 
+controller:
+  replicas: 3
+  
 # -- environment variables. See [webtrees-docker documentation](https://github.com/NathanVaughn/webtrees-docker#environment-variables) for more details.
 # @default -- See below
 env:
