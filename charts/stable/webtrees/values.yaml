@@ -83,17 +83,17 @@ persistence:
     enabled: true
     mountPath: /var/www/webtrees/data/
     storageClass: "longhorn"
-#    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
   media:
     enabled: true
     mountPath: /var/www/webtrees/media/
     storageClass: "longhorn"
-#    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
   themes:
     enabled: true
     mountPath: /var/www/webtrees/modules_v4/
     storageClass: "longhorn"
-#    accessMode: ReadWriteMany  
+    accessMode: ReadWriteOnce
 
 # -- Enable and configure mariadb database subchart under this key.
 #    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb)
