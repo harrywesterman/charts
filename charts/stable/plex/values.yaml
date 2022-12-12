@@ -82,19 +82,19 @@ persistence:
     mountPath: /transcode
 
 # -- Configure the Security Context for the Pod
-podSecurityContext: {}
-  runAsUser: 568
-  runAsGroup: 568
-  fsGroup: 568
+# podSecurityContext: {}
+#   runAsUser: 568
+#   runAsGroup: 568
+#   fsGroup: 568
   # Hardware acceleration using an Intel iGPU w/ QuickSync
   # These IDs below should be matched to your `video` and `render` group on the host
   # To obtain those IDs run the following grep statement on the host:
   # $ cat /etc/group | grep "video\|render"
   # video:x:44:
   # render:x:109:
-  supplementalGroups:
-  - 44
-  - 109
+  # supplementalGroups:
+  # - 44
+  # - 109
 
 # -- Configure the resource requests and/or limits for the Pod
 resources: {}
