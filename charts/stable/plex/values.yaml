@@ -23,14 +23,14 @@ env:
   #ADVERTISE_IP:
   #ALLOWED_NETWORKS:
   #PLEX_CLAIM:
-  #PLEX_PREFERENCE_1: "FriendlyName=plex-kubernetes"
-  #PLEX_PREFERENCE_2: "EnableIPv6=0"
-  #PLEX_PREFERENCE_3: "logDebug=0"
-  #PLEX_PREFERENCE_4: "DisableTLSv1_0=1"
-  #PLEX_PREFERENCE_5: "LanNetworksBandwidth=192.168.1.0/24"
-  #PLEX_PREFERENCE_6: "TranscoderQuality=2"
-  #PLEX_PREFERENCE_7: "TreatWanIpAsLocal=0"
-  #PLEX_PREFERENCE_8: "TranscoderH264BackgroundPreset=fast"
+  PLEX_PREFERENCE_1: "FriendlyName=plex-kubernetes"
+  PLEX_PREFERENCE_2: "EnableIPv6=0"
+  PLEX_PREFERENCE_3: "logDebug=0"
+  PLEX_PREFERENCE_4: "DisableTLSv1_0=1"
+  PLEX_PREFERENCE_5: "LanNetworksBandwidth=192.168.1.0/24"
+  PLEX_PREFERENCE_6: "TranscoderQuality=2"
+  PLEX_PREFERENCE_7: "TreatWanIpAsLocal=0"
+  PLEX_PREFERENCE_8: "TranscoderH264BackgroundPreset=fast"
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
@@ -74,11 +74,11 @@ hostNetwork: false
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
     mountPath: /config
 
   transcode:
-    enabled: false
+    enabled: true
     mountPath: /transcode
 
 #-- Configure the Security Context for the Pod
@@ -98,15 +98,15 @@ podSecurityContext:
 
 
 #-- Configure the resource requests and/or limits for the Pod
-# resources:
-#   requests:
-#     # Hardware acceleration using an Intel iGPU w/ QuickSync and
-#     # using intel-gpu-plugin (https://github.com/intel/intel-device-plugins-for-kubernetes)
-#     gpu.intel.com/i915: 1
-#     cpu: 200m
-#     memory: 256Mi
-  # limits:
-  #   # Hardware acceleration using an Intel iGPU w/ QuickSync and
-  #   # using intel-gpu-plugin (https://github.com/intel/intel-device-plugins-for-kubernetes)
-  #   gpu.intel.com/i915: 1
-  #   memory: 4096Mi
+resources:
+  requests:
+    # Hardware acceleration using an Intel iGPU w/ QuickSync and
+    # using intel-gpu-plugin (https://github.com/intel/intel-device-plugins-for-kubernetes)
+    gpu.intel.com/i915: 1
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    # Hardware acceleration using an Intel iGPU w/ QuickSync and
+    # using intel-gpu-plugin (https://github.com/intel/intel-device-plugins-for-kubernetes)
+    gpu.intel.com/i915: 1
+    memory: 4096Mi
