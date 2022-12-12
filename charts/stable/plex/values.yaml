@@ -78,7 +78,7 @@ persistence:
     mountPath: /config
     accessMode: ReadWriteMany
     storageClass: "longhorn"
-    size: 100Gi
+    size: 50Gi
 
   transcode:
     enabled: true
