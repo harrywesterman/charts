@@ -82,7 +82,7 @@ persistence:
     mountPath: /transcode
 
 #-- Configure the Security Context for the Pod
-podSecurityContext: {}
+podSecurityContext: 
   runAsUser: 568
   runAsGroup: 568
   fsGroup: 568
@@ -98,7 +98,7 @@ podSecurityContext: {}
 
 
 #-- Configure the resource requests and/or limits for the Pod
-resources: {}
+resources:
   requests:
     # Hardware acceleration using an Intel iGPU w/ QuickSync and
     # using intel-gpu-plugin (https://github.com/intel/intel-device-plugins-for-kubernetes)
