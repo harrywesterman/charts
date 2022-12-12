@@ -78,12 +78,14 @@ persistence:
     mountPath: /config
     accessMode: ReadWriteMany
     storageClass: "longhorn"
+    size: 100Gi
 
   transcode:
     enabled: true
     mountPath: /transcode
     accessMode: ReadWriteMany
     storageClass: "longhorn"
+    size: 8Gi
 
 #-- Configure the Security Context for the Pod
 podSecurityContext: 
