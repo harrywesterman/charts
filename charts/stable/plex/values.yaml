@@ -76,14 +76,14 @@ persistence:
   config:
     enabled: true
     mountPath: /config
-    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
     storageClass: "longhorn"
     size: 50Gi
 
   transcode:
     enabled: true
     mountPath: /transcode
-    accessMode: ReadWriteMany
+    accessMode: ReadWriteOnce
     storageClass: "longhorn"
     size: 8Gi
 
