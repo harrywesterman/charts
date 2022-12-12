@@ -19,18 +19,18 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: Amsterdam/Europe
   #ADVERTISE_IP:
   #ALLOWED_NETWORKS:
   #PLEX_CLAIM:
-  PLEX_PREFERENCE_1: "FriendlyName=plex-kubernetes"
-  PLEX_PREFERENCE_2: "EnableIPv6=0"
-  PLEX_PREFERENCE_3: "logDebug=0"
-  PLEX_PREFERENCE_4: "DisableTLSv1_0=1"
+  #PLEX_PREFERENCE_1: "FriendlyName=plex-kubernetes"
+  #PLEX_PREFERENCE_2: "EnableIPv6=0"
+  #PLEX_PREFERENCE_3: "logDebug=0"
+  #PLEX_PREFERENCE_4: "DisableTLSv1_0=1"
   #PLEX_PREFERENCE_5: "LanNetworksBandwidth=192.168.1.0/24"
-  PLEX_PREFERENCE_6: "TranscoderQuality=2"
-  PLEX_PREFERENCE_7: "TreatWanIpAsLocal=0"
-  PLEX_PREFERENCE_8: "TranscoderH264BackgroundPreset=fast"
+  #PLEX_PREFERENCE_6: "TranscoderQuality=2"
+  #PLEX_PREFERENCE_7: "TreatWanIpAsLocal=0"
+  #PLEX_PREFERENCE_8: "TranscoderH264BackgroundPreset=fast"
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
