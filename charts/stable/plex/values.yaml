@@ -76,10 +76,14 @@ persistence:
   config:
     enabled: true
     mountPath: /config
+    accessmode: ReadWriteMany
+    storageClass: "longhorn"
 
   transcode:
     enabled: true
     mountPath: /transcode
+    accessmode: ReadWriteMany
+    storageClass: "longhorn"
 
 #-- Configure the Security Context for the Pod
 podSecurityContext: 
