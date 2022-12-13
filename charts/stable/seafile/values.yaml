@@ -28,7 +28,7 @@ env:
   # -- The initial admin user's password
   SEAFILE_ADMIN_PASSWORD: seafileadminpass
   # -- The hostname for the server (set to your ingress hostname)
-  SEAFILE_SERVER_HOSTNAME: seafile.westermanonline.com
+  SEAFILE_SERVER_HOSTNAME: 
   SEAFILE_SERVER_LETSENCRYPT: false
 
 # -- Configures service settings for the chart.
@@ -43,7 +43,7 @@ ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
   main:
-    enabled: true
+    enabled: false
 
 # -- Enable and configure mariadb database subchart under this key.
 #    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb)
