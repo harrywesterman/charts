@@ -9,7 +9,8 @@ image:
   # -- image repository
   repository: seafileltd/seafile-mc
   # -- image tag
-  tag: 8.0.7
+  #tag: 8.0.7
+  tag: 9.0.10
   # -- image pull policy
   pullPolicy: IfNotPresent
 
@@ -17,17 +18,17 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TIME_ZONE: Etc/UTC
+  TIME_ZONE: Amsterdam/Europe
   # -- The hostname of your database
   DB_HOST: seafile-mariadb
   # -- The root password for mysql (used for initial setup)
   DB_ROOT_PASSWD: seafilerootpass
   # -- The initial admin user's email
-  SEAFILE_ADMIN_EMAIL: example@example.com
+  SEAFILE_ADMIN_EMAIL: harrywesterman@gmail.com
   # -- The initial admin user's password
   SEAFILE_ADMIN_PASSWORD: seafileadminpass
   # -- The hostname for the server (set to your ingress hostname)
-  SEAFILE_SERVER_HOSTNAME:
+  SEAFILE_SERVER_HOSTNAME: seafile.westermanonline.com
   SEAFILE_SERVER_LETSENCRYPT: false
 
 # -- Configures service settings for the chart.
@@ -42,13 +43,13 @@ ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
   main:
-    enabled: false
+    enabled: true
 
 # -- Enable and configure mariadb database subchart under this key.
 #    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb)
 # @default -- See values.yaml
 mariadb:
-  enabled: false
+  enabled: true
   architecture: standalone
   auth:
     database: seafile
@@ -57,12 +58,17 @@ mariadb:
     rootPassword: seafilerootpass
   primary:
     persistence:
-      enabled: false
-      # storageClass: ""
+      enabled: true
+      storageClass: "longhorn"
+      accessMode: ReadWriteOnce
+      size: 5Gi
 
 # -- Configure persistence settings for the chart under this key. Note that `shared` is a reserved keyword in the common-chart, make sure you use a diffrent key for persistance.
 # @default -- See values.yaml
-persistence: {}
-  # data:
-  #   enabled: false
-  #   mountPath: /shared
+persistence:
+  data:
+    enabled: true
+    mountPath: /shared
+    storageClass: "longhorn"
+    accessMode: ReadWriteOnce
+    size: 5Gi
