@@ -26,13 +26,10 @@ env:
 # @default -- See values.yaml
 service:
   main:
-    #type: LoadBalancer
-    type: Cluster
-    externalTrafficPolicy: Cluster
-    loadBalancerIP:
     ports:
       http:
         port: 5055
+
 probes:
   liveness:
     enabled: false
