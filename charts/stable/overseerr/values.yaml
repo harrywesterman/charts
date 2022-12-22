@@ -26,7 +26,8 @@ env:
 # @default -- See values.yaml
 service:
   main:
-    type: LoadBalancer
+    #type: LoadBalancer
+    type: Cluster
     externalTrafficPolicy: Cluster
     loadBalancerIP:
     ports:
