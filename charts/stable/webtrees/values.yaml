@@ -39,13 +39,15 @@ env:
   # -- Prefix to give all tables in the database. Set this to a value of "" to have no table prefix.
   DB_PREFIX: "wt_"
   # -- Admin account username
-  WT_USER:  # admin
+  WT_USER: harry 
+  # admin
   # -- Admin account full name
-  WT_NAME:
+  WT_NAME: HarryWesterman
   # -- Admin account password
-  WT_PASS:  # adminpass
+  WT_PASS: aardbei
+  # adminpass
   # -- Admin account email
-  WT_EMAIL:
+  WT_EMAIL: harrywesterman@gmail.com
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
